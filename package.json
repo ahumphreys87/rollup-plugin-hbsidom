@@ -1,0 +1,41 @@
+{
+  "name": "rollup-plugin-hbsidom",
+  "version": "1.0.0",
+  "description": "A Rollup plugin for transforming handlebars templates to incremental-dom.",
+  "main": "dist/rollup-plugin-hbsidom.cjs.js",
+  "jsnext:main": "dist/rollup-plugin-hbsidom.es6.js",
+  "files": [
+    "src",
+    "dist",
+    "README"
+  ],
+  "scripts": {
+    "build": "rollup -c -f cjs -o dist/rollup-plugin-hbsidom.cjs.js && rollup -c -f es6 -o dist/rollup-plugin-hbsidom.es6.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahumphreys87/rollup-plugin-hbsidom.git"
+  },
+  "keywords": [
+    "rollup-plugin",
+    "es2015",
+    "handlebars",
+    "hbs",
+    "template",
+    "incremental-dom",
+    "idom"
+  ],
+  "author": "Andrew Humphreys <ahumphreys87@googlemail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars-idom": "0.1.3",
+    "rollup-pluginutils": "^1.3.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-register": "^6.7.2",
+    "rollup": "^0.25.7",
+    "rollup-plugin-babel": "^2.4.0"
+  }
+}
