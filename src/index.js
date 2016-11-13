@@ -12,7 +12,7 @@ export default function (options = {}) {
     transform (code, id) {
       if(!filter(id)) return;
 
-      let compiled = "import IncrementalDOM from 'incremental-dom';\n";
+      let compiled = "import * as IncrementalDOM from 'incremental-dom';\n";
       compiled += "export default function(data) {\n";
       compiled += hbsCompiler.compile(content) + "};\n";
 

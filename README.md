@@ -1,26 +1,23 @@
-# rollup-plugin-handlebars [![Travis Build Status][travis-img]][travis]
+# rollup-plugin-hbsidom
 
-[travis-img]: https://travis-ci.org/jibhaine/rollup-plugin-handlebars.svg
-[travis]: https://travis-ci.org/jibhaine/rollup-plugin-handlebars
-
-[Rollup](https://github.com/rollup/rollup) plugin to compile handlebar templates.
+[Rollup](https://github.com/rollup/rollup) plugin to compile handlebar templates to IncrementalDOM.
 
 ## Install
 
 ```sh
-npm i rollup-plugin-handlebars -D
+npm i rollup-plugin-hbsidom -D
 ```
 
 ## Usage
 
 ```js
 import { rollup } from 'rollup';
-import handlebars from 'rollup-plugin-handlebars';
+import hbsIdom from 'rollup-plugin-hbsidom';
 
 rollup({
 	entry: 'main.js',
 	plugins: [
-		handlebars()
+		hbsIdom()
 	]
 });
 ```
@@ -40,20 +37,18 @@ console.log(template({name:'world'}))
 
 ```js
 import { rollup } from 'rollup';
-import handlebars from 'rollup-plugin-handlebars';
+import hbsIdom from 'rollup-plugin-hbsidom';
 import babel from 'rollup-plugin-babel';
 import { minify } from 'uglify-js';
 
 rollup({
 	entry: 'main.js',
 	plugins: [
-		handlebars({
-			//handlebar options
-		})
+		hbsIdom()
 	]
 });
 ```
 
 # License
 
-MIT © [Benjamin Legrand](mailto:contact@benjaminlegrand.net)
+MIT ©

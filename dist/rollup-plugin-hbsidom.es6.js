@@ -11,7 +11,7 @@ function index () {
     transform: function transform(code, id) {
       if (!filter(id)) return;
 
-      var compiled = "import IncrementalDOM from 'incremental-dom';\n";
+      var compiled = "import * as IncrementalDOM from 'incremental-dom';\n";
       compiled += "export default function(data) {\n";
       compiled += hbsCompiler.compile(content) + "};\n";
 
