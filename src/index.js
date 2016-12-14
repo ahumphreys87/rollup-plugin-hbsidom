@@ -14,7 +14,7 @@ export default function (options = {}) {
 
       let compiled = "import * as IncrementalDOM from 'incremental-dom';\n";
       compiled += "export default function(data) {\n";
-      compiled += hbsCompiler.compile(content) + "};\n";
+      compiled += hbsCompiler.compile(code) + "};\n";
 
       return {
         code: compiled,
